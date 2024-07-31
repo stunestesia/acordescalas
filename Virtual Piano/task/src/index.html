@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Virtual Piano - Karol Skolasiński</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <meta property="og:image" content="https://github.com/karolskolasinski/virtual-piano/blob/master/Virtual%20Piano/task/src/img/virtual-piano.png">
+    <meta name="author" content="Karol Skolasiński">
+    <meta name="description" content="Virtual Piano">
+    <meta name="keywords" content="developer, back-end, front-end, HTML, CSS, JS, JavaScript">
+
+    <link rel="icon" href="virtual-piano.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toggle.css">
+</head>
+<body>
+
+<header>
+    <div class="piano">
+        <div class="key">
+            <div class="key-white" id="Tab">
+                <div class="char">Tab</div>
+            </div>
+            <div class="key-black" id="Digit1">
+                <div class="char char-black">1</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyQ">
+                <div class="char">Q</div>
+            </div>
+            <div class="key-black" id="Digit2">
+                <div class="char char-black">2</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyW">
+                <div class="char">W</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyE">
+                <div class="char">E</div>
+            </div>
+            <div class="key-black" id="Digit4">
+                <div class="char char-black">4</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyR">
+                <div class="char">R</div>
+            </div>
+            <div class="key-black" id="Digit5">
+                <div class="char char-black">5</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyT">
+                <div class="char">T</div>
+            </div>
+            <div class="key-black" id="Digit6">
+                <div class="char char-black">6</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyY">
+                <div class="char">Y</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyU">
+                <div class="char">U</div>
+            </div>
+            <div class="key-black" id="Digit8">
+                <div class="char char-black">8</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyI">
+                <div class="char">I</div>
+            </div>
+            <div class="key-black" id="Digit9">
+                <div class="char char-black">9</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyO">
+                <div class="char">O</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="KeyP">
+                <div class="char">P</div>
+            </div>
+            <div class="key-black" id="Minus">
+                <div class="char char-black">-</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="BracketLeft">
+                <div class="char">[</div>
+            </div>
+            <div class="key-black" id="Equal">
+                <div class="char char-black">=</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="BracketRight">
+                <div class="char">]</div>
+            </div>
+            <div class="key-black" id="Backspace">
+                <div class="char char-black">⟵</div>
+            </div>
+        </div>
+        <div class="key">
+            <div class="key-white" id="Backslash">
+                <div class="char">\</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main lighted">
+    <div class="main-title lighted">
+        <h1>Virtual Piano 🎹</h1>
+    </div>
+
+    <div class="switches">
+        <div class="switches-key-visibility">
+            <p class="switches-text">Keys visibility</p>
+            <label>
+                <input class="toggle" type="checkbox" name="key-visibility" checked>
+            </label>
+        </div>
+
+        <div class="switches-light">
+            <p class="switches-text">Light</p>
+            <label>
+                <input class="toggle" type="checkbox" name="light" checked>
+            </label>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <p>Play the piano using a keyboard, a mouse or a touch device. To switch keys description or dark mode use
+            toggles above. Enjoy!</p>
+    </div>
+
+    <div class="main-content tec">
+        <div class="main-img">
+            <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML Powered" title="HTML Powered">
+            <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS Powered" title="CSS Powered">
+            <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="JavaScript Powered"
+                 title="JavaScript Powered">
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>designed in 2020 by ◽
+        <a href="https://www.linkedin.com/in/karolskolasinski/">
+            <span class="name">Karol</span><span class="surname">Skolasiński</span>
+        </a>
+    </p>
+</footer>
+
+<script src="js/piano.js"></script>
+<script src="js/char-hide.js"></script>
+<script src="js/dark-mode.js"></script>
+</body>
+</html>

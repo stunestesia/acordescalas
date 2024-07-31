@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AcordEscalas</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Stunestesia" />
+    <meta name="description" content="AcordEscalas" />
+    <meta
+      name="keywords"
+      content="developer, back-end, front-end, HTML, CSS, JS, JavaScript"
+    />
+
+    <link rel="icon" href="Virtual%20Piano/task/src/virtual-piano.ico" />
+    <link rel="stylesheet" href="Virtual%20Piano/task/src/css/style.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="stunestesia">
+        <img
+          src="stunestesia.png"
+          alt="stunestesia"
+        />
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="banner-content">
+        <div class="title-sec">AcordEscalas</div>
+        <p>
+          seja bem-vindo à biblioteca teste dos principais acordes e escalas com
+          piano virtual
+        </p>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <h2>Biblioteca de Notas</h2>
+        <div class="texto">
+          <p>
+            Encontre abaixo os principais acordes e escalas para testar em
+            composições. Para músicos, beatmakers e profissionais do
+            audiovisual, recomenda-se o
+            <a href="https://www.scales-chords.com/" target="_blank"
+              >Scales and Chords</a
+            >.
+          </p>
+        </div>
+        <input
+          list="noteOptions"
+          id="noteInput"
+          placeholder="Insira uma nota em formato válido (C, C#, Cb etc.)"
+        />
+        <datalist id="noteOptions">
+          <option value="C"></option>
+          <option value="C#"></option>
+          <option value="Cb"></option>
+          <option value="D"></option>
+          <option value="D#"></option>
+          <option value="Db"></option>
+          <option value="E"></option>
+          <option value="E#"></option>
+          <option value="Eb"></option>
+          <option value="F"></option>
+          <option value="F#"></option>
+          <option value="Fb"></option>
+          <option value="G"></option>
+          <option value="G#"></option>
+          <option value="Gb"></option>
+          <option value="A"></option>
+          <option value="A#"></option>
+          <option value="Ab"></option>
+          <option value="B"></option>
+          <option value="B#"></option>
+          <option value="Bb"></option>
+        </datalist>
+
+        <br />
+        <button onclick="buscarNota()" id="generateButton">
+          GERAR ESCALAS E ACORDES
+        </button>
+        <div id="results">
+          <table id="resultsTable">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Espécie</th>
+                <th>Disposição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Resultado -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Piano Virtual</h2>
+        <div class="texto">
+          <p>
+            Modelo de <a href="https://github.com/karolskolasinski/virtual-piano/tree/master" target="_blank">@karolskolasinski
+            </a>. Este piano virtual possui duas oitavas (C1, C2). É possível tocá-lo
+            por meio de cliques ou do teclado periférico (TAB, 1, Q, 2, W, E, 4,
+            R, 5, T, 6, Y, U, 8, I, 9, O, P, -, [, =, ], ⟵, \). 
+          </p>
+          <p>
+            * O acesso em computadores garante melhor experiência. Há risco de desconfiguração em certos dispositivos móveis.
+          </p>
+        </div>
+        <div class="piano">
+          <div class="key">
+            <div class="key-white" id="Tab">
+              <div class="char">Tab<br />C</div>
+            </div>
+            <div class="key-black" id="Digit1">
+              <div class="char char-black">1<br />C#<br />Db</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyQ">
+              <div class="char">Q<br />D</div>
+            </div>
+            <div class="key-black" id="Digit2">
+              <div class="char char-black">2<br />D#<br />Eb</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyW">
+              <div class="char">W<br />E</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyE">
+              <div class="char">E<br />F</div>
+            </div>
+            <div class="key-black" id="Digit4">
+              <div class="char char-black">4<br />F#<br />Gb</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyR">
+              <div class="char">R<br />G</div>
+            </div>
+            <div class="key-black" id="Digit5">
+              <div class="char char-black">5<br />G#<br />Ab</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyT">
+              <div class="char">T<br />A</div>
+            </div>
+            <div class="key-black" id="Digit6">
+              <div class="char char-black">6<br />A#<br />Bb</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyY">
+              <div class="char">Y<br />B</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyU">
+              <div class="char">U<br />C</div>
+            </div>
+            <div class="key-black" id="Digit8">
+              <div class="char char-black">8<br />C#<br />Db</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyI">
+              <div class="char">I<br />D</div>
+            </div>
+            <div class="key-black" id="Digit9">
+              <div class="char char-black">9<br />D#<br />Eb</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyO">
+              <div class="char">O<br />E</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="KeyP">
+              <div class="char">P<br />F</div>
+            </div>
+            <div class="key-black" id="Minus">
+              <div class="char char-black">-<br />F#<br />Gb</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="BracketLeft">
+              <div class="char">[<br />G</div>
+            </div>
+            <div class="key-black" id="Equal">
+              <div class="char char-black">=<br />G#<br />Ab</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="BracketRight">
+              <div class="char">]<br />A</div>
+            </div>
+            <div class="key-black" id="Backspace">
+              <div class="char char-black">⟵<br />A#<br />Bb</div>
+            </div>
+          </div>
+          <div class="key">
+            <div class="key-white" id="Backslash">
+              <div class="char">\<br />B</div>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="record">Gravar</button>
+          <button id="stop">Parar</button>
+          <button id="play">Reproduzir</button>
+          <button id="clear">Limpar</button>
+        </div>
+        <div class="display">
+          <div id="display"></div>
+          <div class="notes-display" id="notes-display"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="js/piano.js"></script>
+  </body>
+</html>
